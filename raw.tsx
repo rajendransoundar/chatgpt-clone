@@ -1,6 +1,5 @@
 import React from "react";
-import { Light, Capabilities, Limitation, Send } from "../../assets";
-import "./style.css";
+// import { Light, Capabilities, Limitation, Send } from "../../assets";
 
 export default function index() {
   return (
