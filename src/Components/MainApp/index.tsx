@@ -1,13 +1,36 @@
 import React from "react";
-import { Examples, Capabilities, Limitation, Send, DownArrow } from "../../assets";
+import {
+  Examples,
+  Capabilities,
+  Limitation,
+  Send,
+  DownArrow,
+  Burger,
+  AddNew
+} from "../../assets";
 import "./style.css";
-import Sidebar from "../Sidebar"
+import Sidebar from "../Sidebar";
 
 export default function index() {
   return (
     <>
       <div className="overflow-hidden w-full h-full relative">
         <div className="flex h-full flex-1 flex-col md:pl-[260px]">
+          <div className="sticky top-0 z-10 flex items-center border-b border-white/20 bg-gray-800 pl-1 pt-1 text-gray-200 sm:pl-3 md:hidden">
+            <button
+              type="button"
+              className="-ml-0.5 -mt-0.5 inline-flex h-10 w-10 items-center justify-center rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:hover:text-white"
+            >
+              <span className="sr-only">Open sidebar</span>
+              <Burger/>
+            </button>
+            <h1 className="flex-1 text-center text-base font-normal">
+              Radio Button Styling.
+            </h1>
+            <button type="button" className="px-3">
+              <AddNew/>
+            </button>
+          </div>
           <main className="relative h-full w-full transition-width flex flex-col overflow-hidden items-stretch flex-1">
             <div className="flex-1 overflow-hidden">
               <div className="react-scroll-to-bottom--css-kzzxx-79elbk h-full dark:bg-gray-800">
@@ -20,7 +43,7 @@ export default function index() {
                       <div className="md:flex items-start text-center gap-3.5">
                         <div className="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1">
                           <h2 className="flex gap-3 items-center m-auto text-lg font-normal md:flex-col md:gap-2">
-                            <Examples/>
+                            <Examples />
                             Examples
                           </h2>
                           <ul className="flex flex-col gap-3.5 w-full sm:max-w-md m-auto">
@@ -38,7 +61,7 @@ export default function index() {
                         </div>
                         <div className="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1">
                           <h2 className="flex gap-3 items-center m-auto text-lg font-normal md:flex-col md:gap-2">
-                            <Capabilities/>
+                            <Capabilities />
                             Capabilities
                           </h2>
                           <ul className="flex flex-col gap-3.5 w-full sm:max-w-md m-auto">
@@ -56,7 +79,7 @@ export default function index() {
                         </div>
                         <div className="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1">
                           <h2 className="flex gap-3 items-center m-auto text-lg font-normal md:flex-col md:gap-2">
-                            <Limitation/>
+                            <Limitation />
                             Limitations
                           </h2>
                           <ul className="flex flex-col gap-3.5 w-full sm:max-w-md m-auto">
@@ -77,7 +100,7 @@ export default function index() {
                     <div className="w-full h-32 md:h-48 flex-shrink-0"></div>
                   </div>
                   <button className="cursor-pointer absolute right-6 bottom-[124px] md:bottom-[120px] z-10 rounded-full border border-gray-200 bg-gray-50 text-gray-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-200">
-                    <DownArrow/>
+                    <DownArrow />
                   </button>
                 </div>
                 <button
@@ -95,13 +118,17 @@ export default function index() {
                       data-id="root"
                       placeholder="Send a message..."
                       className="m-0 w-full resize-none border-0 bg-transparent p-0 pr-7 focus:ring-0 focus-visible:ring-0 dark:bg-transparent pl-2 md:pl-0"
-                      style={{maxHeight: "200px", height: "24px", overflowY: "hidden"}}
+                      style={{
+                        maxHeight: "200px",
+                        height: "24px",
+                        overflowY: "hidden",
+                      }}
                     ></textarea>
                     <button
                       className="absolute p-1 rounded-md text-gray-500 bottom-1.5 md:bottom-2.5 hover:bg-gray-100 enabled:dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent right-1 md:right-2 disabled:opacity-40"
-                    //   disabled=""
+                      //   disabled=""
                     >
-                      <Send/>
+                      <Send />
                     </button>
                   </div>
                 </div>
@@ -122,7 +149,7 @@ export default function index() {
             </div>
           </main>
         </div>
-        <Sidebar/>
+        <Sidebar />
       </div>
     </>
   );
